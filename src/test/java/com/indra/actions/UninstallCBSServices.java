@@ -7,10 +7,12 @@ import static io.restassured.RestAssured.given;
 
 
 public class UninstallCBSServices extends PruebaPages {
+
     public UninstallCBSServices(WebDriver driver) {
         super(driver);
     }
-
+    ReadFileCSV readFileCSV = new ReadFileCSV();
+    /** se debe llamar el metodo readFile() para obtener los datos del archivo */
     public void performLineCleaning(){
        String MSISDN = "3045959972";
        String response = queryCustomerInfoGatewayCBS(MSISDN, "http://10.65.45.12:9001/gatewaycbs/BcServicesInt");
@@ -26,13 +28,6 @@ public class UninstallCBSServices extends PruebaPages {
             //uninstallSubscriptionGatewayMG(MSISDN,"http://10.65.45.12:9001/gatewaymgint/GatewayMGWSInt");
             //acctDeactivationGatewayCBS(Acctkey,"http://10.65.45.12:9001/gatewaycbs/BcServicesInt ");
         }
-
-        //System.out.println(validarSiCuentaActiva(response));
-        //System.out.println(validarSiElPlanEsDiferenteAPrepago(response));
-        //ejecutar uninstallSubscriptionGatewayMG
-        //System.out.println(extraerInformacionDelResponse(response,"ns3:AcctKey"));
-        //acctDeactivationGatewayCBS
-
     }
     /** ejecuta el servicio querycustomerinfo, para porder validar si esta activa la cuenta,
         si es prepago o no y para optener el numero de la cuenta*/

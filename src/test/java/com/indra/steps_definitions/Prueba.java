@@ -1,5 +1,6 @@
 package com.indra.steps_definitions;
 
+import com.indra.actions.ReadFileCSV;
 import com.indra.actions.UninstallCBSServices;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -11,10 +12,12 @@ public class Prueba {
     @Managed
     WebDriver driver;
     UninstallCBSServices uninstallCBSServices = new UninstallCBSServices(driver);
+    ReadFileCSV readFileCSV = new ReadFileCSV();
     @Given("^estoy probando$")
     public void estoyProbando() {
         uninstallCBSServices.performLineCleaning();
-
+        readFileCSV.readFile("src/test/resources/data_tests/pruebaCSV.csv");
+        System.out.println(readFileCSV.data.get(1).get(3));
     }
 
     @When("^hago algo$")
