@@ -47,7 +47,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 
-    //dependecias para el manejo de servicos tipo rest
+    //dependecias para el manejo de servicos tipo REST
 
     // https://mvnrepository.com/artifact/io.rest-assured/rest-assured
     testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '4.3.1'
@@ -68,6 +68,12 @@ dependencies {
     implementation group: 'org.apache.poi', name: 'poi-ooxml-schemas', version: '4.1.2'
     // https://mvnrepository.com/artifact/org.apache.poi/poi-excelant
     implementation group: 'org.apache.poi', name: 'poi-excelant', version: '4.1.2'
+
+    //dependencias para manejo de base de datos oracle ejecucion de querys y sp
+
+    // Get 21.1.0.0 Oracle JDBC driver (ojdbc8.jar) and other companion jars
+    implementation("com.oracle.database.jdbc:ojdbc8-production:21.1.0.0")
+
 
 
 }
