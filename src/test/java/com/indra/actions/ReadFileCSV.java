@@ -5,8 +5,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 
-public class ReadFileCSV {
-    private BufferedReader reader;
+public class ReadFileCSV {    private BufferedReader reader;
     private String line;
     private String parts[]= null;
     public ArrayList<ArrayList<String>> data = new ArrayList<ArrayList<String>>();
