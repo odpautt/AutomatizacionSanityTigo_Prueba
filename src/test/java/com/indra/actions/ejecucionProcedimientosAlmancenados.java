@@ -25,7 +25,7 @@ public class ejecucionProcedimientosAlmancenados {
         {
             // Query the employee names
             CallableStatement cs3 = conn.prepareCall("SET serveroutput ON;BEGIN AL_RE_ACTIVADOR ('3046010569');END;");
-            cs3.getArray();
+
         }
 
     //Close the result set, statement, and the connection
